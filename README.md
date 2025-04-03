@@ -41,7 +41,7 @@ This generated a `package.json` file to manage the project configuration. Then, 
 
 This allowed the creation of a lightweight backend server to serve the frontend files.
 
-![Installing Necessary Packages and Setting Up Project](image-1.png)
+![Installing Necessary Packages and Setting Up Project](Screenshots/image-1.png)
 
 
 ## Step 3: Creating the Application Code
@@ -58,7 +58,7 @@ The server was configured to host static files from the `public` folder and list
 
 **Purpose**: A more interactive and visually appealing UI illustrates how front-end design becomes integrated with back-end services to present submission as polished and compelling.
 
-![Web Application Interface](image.png)
+![Web Application Interface](Screenshots/image.png)
 
 **Interface Output Description**: This step creates a running web application at `http://localhost:3000` with a soft background and an alert button styled accordingly. It shows proper design considerations and frontend integration. The interactive alert verifies that JavaScript works properly in the containerised environment.
 
@@ -104,8 +104,8 @@ docker build -t my-themed-web-app .
 ```
 
 This command builds and packages the app and its dependencies into a reusable image called `my-themed-web-app` by reading from `Dockerfile`.
-![Building Docker Image Process](image-2.png)
-![Complete Docker Image Built](image-3.png)
+![Building Docker Image Process](Screenshots/image-2.png)
+![Complete Docker Image Built](Screenshots/image-3.png)
 
 **Image Build Output Description**:
 The image build process output in the terminal verifies that Docker ran all steps outlined in `Dockerfile`. It began by downloading the official Node.js v18 base image from Docker Hub, followed by extracting each layer represented by distinctive `SHA256` hashes. Docker went on to copy `package.json` files, run `npm install` to install project dependencies, and copy the remaining application code into the container. Docker went ahead and pushed the layers and created an image titled `my-themed-web-app`. The following output verifies a clean and accurate image build, guaranteeing portability across environments.
@@ -152,7 +152,7 @@ http://localhost:3000
 
 The interface loaded successfully, and the interactive button worked as expected.
 
-![Creating Docker Compose and Running it for Web Application](image-4.png)
+![Creating Docker Compose and Running it for Web Application](Screenshots/image-4.png)
 
 
 ## Step 8: Adding a Health Check
@@ -170,7 +170,7 @@ healthcheck:
 **Functionality**:
 The health check also continuously checks if the web app is running successfully every 30 seconds. If the app fails or remains unresponsive, Docker restarts the container. It keeps the app running and accessible, as it should be in a real-world production environment.
 
-![Added Health Check using Docker for Web Application](image-5.png)
+![Added Health Check using Docker for Web Application](Screenshots/image-5.png)
 
 
 ## Step 9: Pushing the Project to GitHub
@@ -190,7 +190,7 @@ This step ensures version control and enables the project to be shared for submi
 
 ## Docker Extension Panel Summary
 
-![Docker Extension Panel Look](image-6.png)
+![Docker Extension Panel Look](Screenshots/image-6.png)
 
 A VS Code screenshot verifies running container `sit323-sit737-2025-prac5p-web` as healthy and running. The screenshot also indicates available Docker images:
 
@@ -204,7 +204,7 @@ Moreover, its file system appears under "Files", confirming what's running withi
 
 ## Container Status Confirmation
 
-![Confirmation After Containerisation of Web Application](image-7.png)
+![Confirmation After Containerisation of Web Application](Screenshots/image-7.png)
 
 Another terminal screenshot displays the container running, its logs outputting the “App running…” line, and its state listed as "healthy". The `docker ps` and `docker logs` commands validate that the app runs successfully and is mapped to port 3000.
 
